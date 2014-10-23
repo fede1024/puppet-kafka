@@ -36,6 +36,8 @@
 #
 # $java_opts                            - Extra Java options.  Default: undef.
 #
+# $classpath                            - Extra classpath entries.  Default: undef.
+#
 # $jmx_port                             - Port on which to expose JMX metrics.  Default: 9999
 #
 # $heap_opts                            - Heap options to pass to JVM on startup.  Default: undef
@@ -135,6 +137,7 @@ class kafka::server(
 
     $java_home                           = $kafka::defaults::java_home,
     $java_opts                           = $kafka::defaults::java_opts,
+    $classpath                           = $kafka::defaults::classpath,
     $jmx_port                            = $kafka::defaults::jmx_port,
     $heap_opts                           = $kafka::defaults::heap_opts,
     $nofiles_ulimit                      = $kafka::defaults::nofiles_ulimit,
